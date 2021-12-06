@@ -94,25 +94,25 @@ namespace PraktikumWeek13
                         Console.Clear();
                         Console.WriteLine("\n{0,-5}{1,-7}{2,-25}{3,-20}{4,-20}{5,-20}{6,-10}", "NO", "NIM", "NAMA", "JENIS KELAMIN", "TAHUN MASUK", "PROGRAM STUDI", "KELAS");
                
-                    for (int no = 0; no < dataMahasiswa.Count; no++)
-                        Console.WriteLine($"{(no + 1),-5}{dataMahasiswa[no].NIM.ToUpper(),-7}{dataMahasiswa[no].nama.ToUpper(),-25}{dataMahasiswa[no].jenisKelamin.ToUpper(),-20}{dataMahasiswa[no].tahunMasuk,-20}{dataMahasiswa[no].programStudi.ToUpper(),-20}{dataMahasiswa[no].kelas.ToUpper(),-10}");
+                        for (int no = 0; no < dataMahasiswa.Count; no++)
+                            Console.WriteLine($"{(no + 1),-5}{dataMahasiswa[no].NIM.ToUpper(),-7}{dataMahasiswa[no].nama.ToUpper(),-25}{dataMahasiswa[no].jenisKelamin.ToUpper(),-20}{dataMahasiswa[no].tahunMasuk,-20}{dataMahasiswa[no].programStudi.ToUpper(),-20}{dataMahasiswa[no].kelas.ToUpper(),-10}");
                     
-                    var tambahData = "0";
-                    while (tambahData.ToLower() != "y" && tambahData.ToLower() != "n")
-                    {
-                        Console.Write("Tambah data ? (y/n) ... ");
-                        tambahData = Console.ReadLine();
-                    }
+                        var tambahData = "0";
+                        while (tambahData.ToLower() != "y" && tambahData.ToLower() != "n")
+                        {
+                            Console.Write("Tambah data ? (y/n) ... ");
+                            tambahData = Console.ReadLine();
+                        }
 
-                    if (tambahData.ToLower() == "y")
-                    {
-                        Console.Write("Berapa data ? ");
-                        jumlahData += Convert.ToInt16(Console.ReadLine());
+                        if (tambahData.ToLower() == "y")
+                        {
+                            Console.Write("Berapa data ? ");
+                            jumlahData += Convert.ToInt16(Console.ReadLine());
+                        }
                     }
                 }
+                jumlahData--;
             }
-            jumlahData--;
         }
     }
-}
 }
